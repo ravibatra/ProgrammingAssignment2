@@ -1,0 +1,11 @@
+## The function cacheSolve returns the inverse of a matrix A created with the makeCacheMatrix function.
+cacheSolve <- function(x, ...) {
+xInv <- x$getinverse()
+if (!is.null(xInv)) {
+	return(xInv)
+} else {
+	xInv <- solve(x$get())
+	x$setinverse(xInv)
+	return(xInv)
+	}
+}
